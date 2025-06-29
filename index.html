@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo" id="logo">YouTube Clone</div>
+
+        <input type="text" id="search-input" placeholder="Search" class="search-bar">
+        <button class="search-btn" id="search-btn">🔍</button>
+    </header>
+   <button id="dark-mode-toggle" class="dark-toggle">🌙 Dark Mode</button>
+
+
+      <!-- Embedded Video Player -->
+    <div id="video-player-section">
+        <iframe id="player-frame" frameborder="0" allowfullscreen></iframe>
+        <button onclick="closePlayer()">Close Player</button>
+    </div>
+    
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscriptions</li>
+            </ul>
+        </aside>
+        
+        <main class="video-container" id="video-container">
+            <!-- Videos will be loaded here dynamically -->
+        </main>
+    </div>
+
+</body>
+</html>

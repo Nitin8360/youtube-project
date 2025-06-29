@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff0000;
+    padding: 10px;
+    color: white;
+}
+
+.logo {
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-btn {
+    padding: 8px 12px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 10px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar li:hover {
+    background: #ddd;
+}
+
+.video-container {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.video {
+    width: 300px;
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.video:hover {
+    transform: scale(1.02);
+}
+
+.video img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.video p {
+    font-size: 1em;
+    margin: 10px 0 0;
+}
+
+/* Video Player Section */
+#video-player-section {
+    display: none;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#player-frame {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin-top: 10px;
+    }
+}
+
+#video-player-section button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ====== PLAYER PAGE STYLES ====== */
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+} */
+
+.video-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin: 30px 20px 10px;
+    color: #333;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 20px 40px;
+}
+
+.video {
+    width: 280px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.video:hover {
+    transform: translateY(-5px);
+}
+
+.video img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.video p {
+    padding: 10px;
+    margin: 0;
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* dark mode */
+/* Default Light Mode */
+/* 🌗 DARK MODE with Gradient */
+body.dark-mode {
+  background: linear-gradient(to bottom right, #121212, #1f1f1f);
+  color: #fff;
+}
+
+body.dark-mode header {
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+  color: #fff;
+}
+
+body.dark-mode .sidebar {
+  background: linear-gradient(to bottom, #1c1c1c, #2a2a2a);
+  color: white;
+}
+
+body.dark-mode .video {
+  background: linear-gradient(to bottom right, #252525, #2f2f2f);
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-mode .video p {
+  color: #fff;
+}
+
+body.dark-mode .search-bar {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode .search-btn {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .video p {
+  color: #fff;
+}
+body:not(.dark-mode) .video p {
+  color: #000;
+}
+
+body, .video, header, .sidebar {
+  transition: background 0.7s ease, color 0.7s ease;
+}
